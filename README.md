@@ -1,10 +1,13 @@
-# API EMPLOYEES - Lean Solution Group 
+# API EMPLOYEES
 
 This API allows to handle operation such as create, read, update, delete (CRUD) over Employee Table using: <br/>
  * **Java 8** <br/>
  * **Spring boot v2.4.8** <br/>
  * **JPA** <br/>
  * **H2 Data base in memory**
+
+# Postman collections file
+ > api/src/main/resources/Lean Solution API.postman_collection.json 
 
 # Runnning API:
  
@@ -54,6 +57,3 @@ This API allows to handle operation such as create, read, update, delete (CRUD) 
 
 * Filter Position by Name (Optional) or Employee Name (Optional), if no parameters are given will return All Position and his Employees  
     > /position/findbypositionorname
-
-# Postman collections file
- > api/src/main/resources/Lean Solution API.postman_collection.json 
