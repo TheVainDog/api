@@ -1,0 +1,440 @@
+{
+	"info": {
+		"_postman_id": "937ccb22-7299-4162-8436-8e89b3a44212",
+		"name": "Lean Solution API",
+		"description": "Lean Solutions Group API Employee CRUD+",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "POST",
+			"item": [
+				{
+					"name": "Create Employee(s)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"employees\": [{\r\n        \"salary\": 5000,\r\n        \"position\": 1,\r\n        \"person\": {\r\n            \"name\": \"New\",\r\n            \"lastName\": \"Person\",\r\n            \"address\": \"Create\",\r\n            \"cellPhone\": \"0000-000-000\",\r\n            \"cityName\": \"Test\"\r\n        }\r\n    }]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/employee/save",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"employee",
+								"save"
+							]
+						},
+						"description": "**Path:** /employee/save <br/>\n**Description:** Creates Employee(s) <br/>\n**Requires:** JSON Object as Body with at least Position ID, and Employee List with at least one employee<br/>"
+					},
+					"response": [
+						{
+							"name": "Create an employee",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 1,\r\n    \"employees\": [{\r\n        \"salary\": 5000,\r\n        \"position\": 1,\r\n        \"person\": {\r\n            \"name\": \"New\",\r\n            \"lastName\": \"Person\",\r\n            \"address\": \"Create\",\r\n            \"cellPhone\": \"0000-000-000\",\r\n            \"cityName\": \"Test\"\r\n        }\r\n    }]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/employee/save",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"employee",
+										"save"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "Create employees",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 1,\r\n    \"employees\": [{\r\n        \"salary\": 5000,\r\n        \"position\": 1,\r\n        \"person\": {\r\n            \"name\": \"New\",\r\n            \"lastName\": \"DEV\",\r\n            \"address\": \"Create\",\r\n            \"cellPhone\": \"0000-000-000\",\r\n            \"cityName\": \"Test\"\r\n        }\r\n    },\r\n    {\r\n        \"salary\": 5000,\r\n        \"position\": 2,\r\n        \"person\": {\r\n            \"name\": \"New\",\r\n            \"lastName\": \"QA\",\r\n            \"address\": \"Create\",\r\n            \"cellPhone\": \"0000-000-000\",\r\n            \"cityName\": \"Test\"\r\n        }\r\n    }]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/employee/save",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"employee",
+										"save"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				}
+			],
+			"description": "Contains a POST methods"
+		},
+		{
+			"name": "PUT",
+			"item": [
+				{
+					"name": "Update Employee (By ID)",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 6,\r\n    \"salary\": 500,\r\n    \"person\": {\r\n        \"id\": 6,\r\n        \"name\": \"Name Updated\",\r\n        \"lastName\": \"Last Name Updated\",\r\n        \"address\": \"Updating\",\r\n        \"cellPhone\": \"0000-000-000\",\r\n        \"cityName\": \"Test\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/employee/update/{id}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"employee",
+								"update",
+								"{id}"
+							]
+						},
+						"description": "**Path:** /employee/update/{id} <br />\n**Description:** Updates an Employee by Identifier <br />\n**Params:** Employee ID"
+					},
+					"response": [
+						{
+							"name": "Update Employee (By ID)",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 6,\r\n    \"salary\": 500,\r\n    \"person\": {\r\n        \"id\": 6,\r\n        \"name\": \"Name Updated\",\r\n        \"lastName\": \"Last Name Updated\",\r\n        \"address\": \"Updating\",\r\n        \"cellPhone\": \"0000-000-000\",\r\n        \"cityName\": \"Test\"\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/employee/update/6",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"employee",
+										"update",
+										"6"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "DELETE",
+			"item": [
+				{
+					"name": "Delete Employee (By ID)",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/employee/deletebyid/{id}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"employee",
+								"deletebyid",
+								"{id}"
+							]
+						},
+						"description": "**Path:** /employee/deletebyid/{id} <br />\n**Description:** Delete an Employee by Identifier <br />\n**Params:** Employee ID"
+					},
+					"response": [
+						{
+							"name": "Delete Employee (By ID)",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/employee/deletebyid/2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"employee",
+										"deletebyid",
+										"2"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				}
+			],
+			"description": "Contains DELETE Methods"
+		},
+		{
+			"name": "GET",
+			"item": [
+				{
+					"name": "List All Employees",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/employee/findall",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"employee",
+								"findall"
+							]
+						},
+						"description": "**Path:** /employee/findall <br />\n**Description:** List all employee(s) (Only employee(s)) <br />\n**Params:** None"
+					},
+					"response": []
+				},
+				{
+					"name": "Find Employee (By ID)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/employee/findbyid/{id}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"employee",
+								"findbyid",
+								"{id}"
+							]
+						},
+						"description": "**Path:** /employee/findbyid/{id} <br />\n**Description:** List an Employee by Identifier <br />\n**Params:** Employee ID"
+					},
+					"response": [
+						{
+							"name": "Find Employee (By ID)",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/employee/findbyid/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"employee",
+										"findbyid",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": "{\r\n    \"id\": 1,\r\n    \"salary\": 1000,\r\n    \"position\": 1,\r\n    \"person\": {\r\n        \"id\": 1,\r\n        \"name\": \"Pedro\",\r\n        \"lastName\": \"Hombre Abejorro\",\r\n        \"address\": \"Fake st 123\",\r\n        \"cellPhone\": \"555543210\",\r\n        \"cityName\": \"Kuala lumpur\"\r\n    }\r\n}"
+						}
+					]
+				},
+				{
+					"name": "List All Employees and Position (Order By Salary)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/position/findall",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"position",
+								"findall"
+							]
+						},
+						"description": "**Path:** /position/findall <br />\n**Description:** List All Position and his Employees <br />\n**Params:** None"
+					},
+					"response": []
+				},
+				{
+					"name": "Filter Employees",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/position/findbypositionorname",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"position",
+								"findbypositionorname"
+							]
+						},
+						"description": "**Path:** /position/findbypositionorname <br />\n**Description:** List Employees Filtred by Optional Params or List All Employees <br />\n**Params:** <br />\n * name (optional) <br />\n * employee (optional) <br />"
+					},
+					"response": [
+						{
+							"name": "Filter Employees with out params",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/position/findbypositionorname",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"position",
+										"findbypositionorname"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": "[\r\n    {\r\n        \"id\": 1,\r\n        \"name\": \"DEV\",\r\n        \"employees\": [\r\n            {\r\n                \"id\": 8,\r\n                \"salary\": 5000,\r\n                \"position\": 1,\r\n                \"person\": {\r\n                    \"id\": 8,\r\n                    \"name\": \"New DEV\",\r\n                    \"lastName\": \"Person\",\r\n                    \"address\": \"Create\",\r\n                    \"cellPhone\": \"0000-000-000\",\r\n                    \"cityName\": \"Test\"\r\n                }\r\n            },\r\n            {\r\n                \"id\": 9,\r\n                \"salary\": 5000,\r\n                \"position\": 1,\r\n                \"person\": {\r\n                    \"id\": 9,\r\n                    \"name\": \"New QA\",\r\n                    \"lastName\": \"Person\",\r\n                    \"address\": \"Create\",\r\n                    \"cellPhone\": \"0000-000-000\",\r\n                    \"cityName\": \"Test\"\r\n                }\r\n            },\r\n            {\r\n                \"id\": 2,\r\n                \"salary\": 2100,\r\n                \"position\": 1,\r\n                \"person\": {\r\n                    \"id\": 2,\r\n                    \"name\": \"Morty\",\r\n                    \"lastName\": \"Smith\",\r\n                    \"address\": \"Unknown\",\r\n                    \"cellPhone\": \"Unknown\",\r\n                    \"cityName\": \"Washintong\"\r\n                }\r\n            },\r\n            {\r\n                \"id\": 3,\r\n                \"salary\": 1500,\r\n                \"position\": 1,\r\n                \"person\": {\r\n                    \"id\": 3,\r\n                    \"name\": \"Samus\",\r\n                    \"lastName\": \"Aran\",\r\n                    \"address\": \"Colonia K-2L\",\r\n                    \"cellPhone\": \"None\",\r\n                    \"cityName\": \"La tierra\"\r\n                }\r\n            },\r\n            {\r\n                \"id\": 4,\r\n                \"salary\": 1200,\r\n                \"position\": 1,\r\n                \"person\": {\r\n                    \"id\": 4,\r\n                    \"name\": \"Geralt\",\r\n                    \"lastName\": \"De Rivia\",\r\n                    \"address\": \"Kaedwen\",\r\n                    \"cellPhone\": \"None\",\r\n                    \"cityName\": \"Kaer Morhen\"\r\n                }\r\n            },\r\n            {\r\n                \"id\": 1,\r\n                \"salary\": 1000,\r\n                \"position\": 1,\r\n                \"person\": {\r\n                    \"id\": 1,\r\n                    \"name\": \"Pedro\",\r\n                    \"lastName\": \"Hombre Abejorro\",\r\n                    \"address\": \"Fake st 123\",\r\n                    \"cellPhone\": \"555543210\",\r\n                    \"cityName\": \"Kuala lumpur\"\r\n                }\r\n            }\r\n        ]\r\n    },\r\n    {\r\n        \"id\": 2,\r\n        \"name\": \"QA\",\r\n        \"employees\": [\r\n            {\r\n                \"id\": 5,\r\n                \"salary\": 2500,\r\n                \"position\": 2,\r\n                \"person\": {\r\n                    \"id\": 5,\r\n                    \"name\": \"Tifa\",\r\n                    \"lastName\": \"Lockhart\",\r\n                    \"address\": \"Mt. Nibel\",\r\n                    \"cellPhone\": \"216-906-2847\",\r\n                    \"cityName\": \"Nibelheim\"\r\n                }\r\n            },\r\n            {\r\n                \"id\": 7,\r\n                \"salary\": 1500,\r\n                \"position\": 2,\r\n                \"person\": {\r\n                    \"id\": 7,\r\n                    \"name\": \"Lara\",\r\n                    \"lastName\": \"Croft\",\r\n                    \"address\": \"Lodon\",\r\n                    \"cellPhone\": \"1233-4516-125\",\r\n                    \"cityName\": \"England\"\r\n                }\r\n            },\r\n            {\r\n                \"id\": 6,\r\n                \"salary\": 500,\r\n                \"position\": 2,\r\n                \"person\": {\r\n                    \"id\": 6,\r\n                    \"name\": \"Name Updated\",\r\n                    \"lastName\": \"Last Name Updated\",\r\n                    \"address\": \"Updating\",\r\n                    \"cellPhone\": \"0000-000-000\",\r\n                    \"cityName\": \"Test\"\r\n                }\r\n            }\r\n        ]\r\n    }\r\n]"
+						},
+						{
+							"name": "Filter Employees by Position Name",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/position/findbypositionorname?name=QA",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"position",
+										"findbypositionorname"
+									],
+									"query": [
+										{
+											"key": "name",
+											"value": "QA"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": "[\r\n    {\r\n        \"id\": 2,\r\n        \"name\": \"QA\",\r\n        \"employees\": [\r\n            {\r\n                \"id\": 5,\r\n                \"salary\": 2500,\r\n                \"position\": 2,\r\n                \"person\": {\r\n                    \"id\": 5,\r\n                    \"name\": \"Tifa\",\r\n                    \"lastName\": \"Lockhart\",\r\n                    \"address\": \"Mt. Nibel\",\r\n                    \"cellPhone\": \"216-906-2847\",\r\n                    \"cityName\": \"Nibelheim\"\r\n                }\r\n            },\r\n            {\r\n                \"id\": 7,\r\n                \"salary\": 1500,\r\n                \"position\": 2,\r\n                \"person\": {\r\n                    \"id\": 7,\r\n                    \"name\": \"Lara\",\r\n                    \"lastName\": \"Croft\",\r\n                    \"address\": \"Lodon\",\r\n                    \"cellPhone\": \"1233-4516-125\",\r\n                    \"cityName\": \"England\"\r\n                }\r\n            },\r\n            {\r\n                \"id\": 6,\r\n                \"salary\": 500,\r\n                \"position\": 2,\r\n                \"person\": {\r\n                    \"id\": 6,\r\n                    \"name\": \"Name Updated\",\r\n                    \"lastName\": \"Last Name Updated\",\r\n                    \"address\": \"Updating\",\r\n                    \"cellPhone\": \"0000-000-000\",\r\n                    \"cityName\": \"Test\"\r\n                }\r\n            }\r\n        ]\r\n    }\r\n]"
+						},
+						{
+							"name": "Filter Employees by Employee Name",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/position/findbypositionorname?employee=Lara",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"position",
+										"findbypositionorname"
+									],
+									"query": [
+										{
+											"key": "employee",
+											"value": "Lara"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": "[\r\n    {\r\n        \"id\": 2,\r\n        \"name\": \"QA\",\r\n        \"employees\": [\r\n            {\r\n                \"id\": 7,\r\n                \"salary\": 1500,\r\n                \"position\": 2,\r\n                \"person\": {\r\n                    \"id\": 7,\r\n                    \"name\": \"Lara\",\r\n                    \"lastName\": \"Croft\",\r\n                    \"address\": \"Lodon\",\r\n                    \"cellPhone\": \"1233-4516-125\",\r\n                    \"cityName\": \"England\"\r\n                }\r\n            }\r\n        ]\r\n    }\r\n]"
+						}
+					]
+				}
+			],
+			"description": "Contains GET Methods"
+		}
+	]
+}
