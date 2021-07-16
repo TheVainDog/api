@@ -14,7 +14,7 @@ This API allows to handle operation such as create, read, update, delete (CRUD) 
       > cd api <br/>
  3. Run API <br/>
       > mvn spring-boot:run
- 4. By Default API runs in port 8080, so Try API
+ 4. By Default API runs in port 8080, so Try the API
       > http://localhost:8080/employee/findall
 
  # Runnning API specifying a PORT:
@@ -29,7 +29,7 @@ This API allows to handle operation such as create, read, update, delete (CRUD) 
       > cd target
   5. Run the Jar file in a free port using parameter --server.port like this, example:
       > java -jar api-0.0.1-SNAPSHOT.jar --server.port=7788
-  6. Try API in the port you selected:
+  6. Try the API in the port you selected:
       > http://localhost:7788/employee/findall
 
 # End points
